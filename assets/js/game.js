@@ -35,8 +35,17 @@ var fightOrSkip = function() {
 
 // fight function
 var fight = function(enemy) {
+   // keep track of who goes first
+   var isPlayerTurn = true;
+   ​
+     // randomly change turn order
+     if (Math.random() > 0.5) {
+       isPlayerTurn = false;
+     }
+
   while(enemy.health > 0 && playerInfo.health >0){
-    if(fightOrSkip());{
+    if (isPlayerTurn){
+      if(fightOrSkip());{
       break;
     }
 
@@ -70,6 +79,11 @@ var fight = function(enemy) {
       } else {
         window.alert(playerInfo.name + " still has " + playerInfo.health + " health left.");
       }
+    }
+    //Switch turn for next round
+    isPlayerTurn = !isPlayerTurn;
+  }
+};      
 
 // run fight function to start game
 var startGame = function() {
