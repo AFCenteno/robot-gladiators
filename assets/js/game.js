@@ -137,10 +137,5 @@ var endGame = function() {
   }
 }
 
-// Game States
-// "WIN" - Player robot has defeated all enemy-robots
-//    * Fight all enemy-robots
-// "LOSE" - Player robot's health is zero or less
-
 //Start game when page loads
 startGame();
