@@ -36,18 +36,18 @@ var fightOrSkip = function() {
 // fight function
 var fight = function(enemy) {
    // keep track of who goes first
-   var isPlayerTurn = true;
+   var isPlayerTurn = true
    
      // randomly change turn order
      if (Math.random() > 0.5) {
-       isPlayerTurn = false;
+       isPlayerTurn = false
      }
 
   while(enemy.health > 0 && playerInfo.health >0){
     if (isPlayerTurn){
       if(fightOrSkip());{
       break;
-    }
+      }
 
       // remove enemy's health by subtracting the amount set in the playerAttack variable
       // generate random damage value based on player's attack power
